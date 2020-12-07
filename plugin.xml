@@ -43,10 +43,12 @@
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
         </config-file>
 
-        <!-- Manifest configurations -->
+        <!-- Manifest configurations (already in config.xml) -->
+        <!--
         <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
           <application android:usesCleartextTraffic="true" />
         </edit-config>
+        -->
 
         <config-file target="config.xml" parent="/*">
             <feature name="HMSAds">
