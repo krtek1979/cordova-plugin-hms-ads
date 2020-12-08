@@ -3,6 +3,11 @@ repositories {
     maven { url 'http://developer.huawei.com/repo/' }
 }
 
+dependencies {
+    classpath 'com.huawei.agconnect:agcp:1.4.2.301'
+    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
+}
+
 cdvPluginPostBuildExtras.add({
     apply plugin: 'com.huawei.agconnect'
 })
