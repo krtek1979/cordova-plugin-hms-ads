@@ -8,6 +8,7 @@ buildscript {
         classpath 'com.huawei.agconnect:agcp:1.4.2.301'
     }
 }
+apply plugin: 'com.huawei.agconnect'
 
 dependencies {
     implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
