@@ -2,7 +2,7 @@
 
 buildscript {
     repositories { 
-        maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'http://aukciomania.com/repo/' }
     }
     dependencies {
         classpath 'com.huawei.agconnect:agcp:1.4.2.301'
