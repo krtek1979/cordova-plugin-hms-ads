@@ -9,11 +9,6 @@ buildscript {
     }
 }
 
-repositories {
-    maven { url 'http://developer.huawei.com/repo/' }
-    maven { url 'https://repo1.maven.org/maven2/' }
-}
-
 dependencies {
     implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
 }
