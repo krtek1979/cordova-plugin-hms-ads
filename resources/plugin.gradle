@@ -2,8 +2,8 @@
 
 buildscript {
     repositories {
-        maven { url 'https://repo1.maven.org/maven2/' }
         maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'https://repo1.maven.org/maven2/' }
     }
     dependencies {
         classpath 'com.huawei.agconnect:agcp:1.4.2.301'
@@ -11,12 +11,12 @@ buildscript {
 }
 
 repositories {
-    maven { url 'https://repo1.maven.org/maven2/' }
     maven { url 'http://developer.huawei.com/repo/' }
+    maven { url 'https://repo1.maven.org/maven2/' }
 }
 
 dependencies {
-    compile 'com.huawei.agconnect:agconnect-core:1.4.2.301'
+    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
 }
 
 cdvPluginPostBuildExtras.add({
