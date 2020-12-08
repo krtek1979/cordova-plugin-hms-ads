@@ -2,7 +2,6 @@
 
 buildscript {
     repositories {
-        mavenCentral()
         maven { url 'http://developer.huawei.com/repo/' }
     }
     dependencies {
@@ -11,7 +10,6 @@ buildscript {
 }
 
 repositories {
-    mavenCentral()
     maven { url 'http://developer.huawei.com/repo/' }
 }
 
