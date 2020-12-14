@@ -120,13 +120,14 @@ function handleDisplacement(event) {
 
 
 function addObserverIfDesiredNodeAvailable(arg1,arg2) {
+    //var docbody=document.body;
     if(!document.body) {
         //The node we need does not exist yet.
         //Wait 500ms and try again
         window.setTimeout(function(){addObserverIfDesiredNodeAvailable(arg1,arg2);},500);
         return;
     }
-    mutationObserver.observe(arg1,arg2);
+    mutationObserver.observe(document.body,arg2);
     //window.addEventListener('scroll', handleDisplacement);
 }
 
