@@ -117,7 +117,21 @@ function handleDisplacement(event) {
         nativeAd.setProps(nativeAd.props);
     }
 }
+
+
+function addObserverIfDesiredNodeAvailable(arg1,arg2) {
+    if(!document.body) {
+        //The node we need does not exist yet.
+        //Wait 500ms and try again
+        window.setTimeout(function(){addObserverIfDesiredNodeAvailable(arg1,arg2);},500);
+        return;
+    }
+    mutationObserver.observe(arg1,arg2);
+    //window.addEventListener('scroll', handleDisplacement);
+}
+
 const mutationObserver = new MutationObserver(handleDisplacement);
-mutationObserver.observe(document.body, { attributes: true, childList: true, subtree: true });
+addObserverIfDesiredNodeAvailable(document.body, { attributes: true, childList: true, subtree: true });
+//mutationObserver.observe(document.body, { attributes: true, childList: true, subtree: true });
 window.addEventListener('scroll', handleDisplacement);
 //# sourceMappingURL=native.js.map
